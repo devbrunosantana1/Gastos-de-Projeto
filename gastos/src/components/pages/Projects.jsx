@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom"
-
-export function NewProject() {
+export function Projects() {
     return(
         <div>
-            <h1>Novo Projeto</h1>
+            <h1>Projects</h1>
             <Link to="/">retornar a página inicial</Link>
         </div>
     )

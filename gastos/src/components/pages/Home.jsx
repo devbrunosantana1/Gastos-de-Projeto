@@ -1,17 +1,14 @@
-import { Link } from "react-router-dom"
+import styles from "./Home.module.css";
+import savings from "../../img/savings.svg";
+import { LinkButton } from "../layout/LinkButton";
 
 export function Home() {
     return(
-        <div>
-            <h1>Pagina Inicial</h1>
-            <nav>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/company">Empresa</Link></li>
-                    <li><Link to="/contact">Contato</Link></li>
-                    <li><Link to="/newproject">Novo Projeto</Link></li>
-                </ul>
-            </nav>
-        </div>
+        <section className={styles.home_container}>
+            <h1>Bem-Vindo ao <span>Gastos</span></h1>
+            <p>Comece a gerenciar os seus projetos agora mesmo!</p>
+            <LinkButton to="/newproject" text="Criar Projeto"/>
+            <img src={savings} alt="Gastos" />
+        </section>
     )
 }
