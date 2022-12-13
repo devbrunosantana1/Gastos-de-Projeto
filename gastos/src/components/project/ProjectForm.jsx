@@ -1,12 +1,11 @@
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { Input } from '../form/input';
 import { Select } from '../form/Select';
 import { SubmitButton } from '../form/SubmitButton';
 import styles from './ProjectForm.module.css';
 
-export function ProjectForm({ handleSubmit, btnText, projectData }){
+export function ProjectForm({ handleSubmit, btnText, projectData }) {
 
     const [categories, setCategories] = useState([])
     const [project, setProject] = useState(projectData || {});
@@ -24,7 +23,7 @@ export function ProjectForm({ handleSubmit, btnText, projectData }){
     }, [])
 
     const submit = (e) => {
-        e.proventDefault()
+        e.preventDefault()
         handleSubmit(project)
     }
 

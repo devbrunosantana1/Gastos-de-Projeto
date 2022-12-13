@@ -4,12 +4,12 @@ import styles from "./NewProject.module.css"
 
 export function NewProject() {
 
-    const history = useNavigate()
+    const navigate = useNavigate()
 
     function createPost(project) {
 
         //instialize gastos and services
-        project.gastos = 0
+        project.cost = 0
         project.services = []
 
         fetch("http://localhost:5000/projects",{
@@ -23,9 +23,9 @@ export function NewProject() {
         .then((data) => {
             console.log(data)
             //redirect
-            history("/projects")
+            navigate("/projects", { state:{message: "Projeto criado com sucesso"}})
         })
-        .catch(err => console.log(err))
+        .catch((err) => console.log(err))
     }
 
     return(
