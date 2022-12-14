@@ -9,4 +9,4 @@ npm run backend
 
 Lembando que deve ser um em cada terminal.
 
-Projeto reaalizado com React.js.
+Projeto realizado com React.js.
